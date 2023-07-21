@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .form-container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #888888;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="form-container">
+                    <h2 class="mb-4 text-center">Employee Registration Form</h2>
+                    <form action="/Employee/Register" method="post">
+                        <div class="form-group row">
+                            <label for="empid" class="col-sm-4 col-form-label">EmpID</label>
+                            <div class="col-sm-8">
+                                <input type="number" id="empid" name="empid" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-4 col-form-label">Name</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-4 col-form-label">Email</label>
+                            <div class="col-sm-8">
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-sm-4 col-form-label">Password</label>
+                            <div class="col-sm-8">
+                                <input type="password" id="password" name="password" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="location" class="col-sm-4 col-form-label">Location</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="location" name="location" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="joindate" class="col-sm-4 col-form-label">JoinDate</label>
+                            <div class="col-sm-8">
+                                <input type="date" id="joindate" name="joindate" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="salary" class="col-sm-4 col-form-label">Salary</label>
+                            <div class="col-sm-8">
+                                <input type="number" id="salary" name="salary" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row justify-content-center">
+                            <div class="col-sm-8">
+                                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

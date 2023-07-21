@@ -1,0 +1,22 @@
+CREATE TABLE employees (
+    empId INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    location VARCHAR(100),
+    joinDate DATE,
+    salary DOUBLE(9,2)
+);
+
+
+Sample data
+insert queries..
+INSERT INTO employees (empId, name, email, password, location, joinDate, salary)
+VALUES (1, 'John Doe', 'john.doe@example.com', '12345', 'New York', '2023-07-21', 50000.00);
+
+INSERT INTO employees (empId, name, email, password, location, joinDate, salary)
+VALUES (2, 'Jane Smith', 'jane.smith@example.com', '12345', 'Los Angeles', '2023-07-15', 60000.00);
+
+INSERT INTO employees (empId, name, email, password, location, joinDate, salary)
+VALUES (3, 'Mike Johnson', 'mike.johnson@example.com', '12345', 'Chicago', '2023-07-10', 55000.00);
+

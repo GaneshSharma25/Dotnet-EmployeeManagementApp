@@ -1,4 +1,10 @@
 ﻿
+@using BOL;
+@{
+    Employee emp = ViewBag.ResultEmployee;
+    Console.WriteLine(emp);
+
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +44,7 @@
     </style>
 </head>
 <body>
-    <h1>Welcome @Model.Name</h1>
+    <h1>Welcome @emp.Name</h1>
 
     <h4>Employee Details</h4>
     <table>
@@ -48,33 +54,39 @@
         </tr>
         <tr>
             <td>EmpID:</td>
-            <td>@Model.EmpId</td>
+            <td>@emp.EmpId</td>
         </tr>
         <tr>
             <td>Name:</td>
-            <td>@Model.Name</td>
+            <td>@emp.Name</td>
         </tr>
         <tr>
             <td>Email:</td>
-            <td>@Model.Email</td>
+            <td>@emp.Email</td>
         </tr>
         <tr>
             <td>Location:</td>
-            <td>@Model.Location</td>
+            <td>@emp.Location</td>
         </tr>
         <tr>
             <td>JoinDate:</td>
-            <td>@Model.JoinDate</td>
+            <td>@emp.JoinDate</td>
         </tr>
         <tr>
             <td>Salary:</td>
-            <td>@Model.Salary</td>
+            <td>@emp.Salary</td>
         </tr>
         <tr>
         </tr>
         <tr>
             <td>
                 <a href="\Employee\Index">GET DETAILS OF ALL EMPLOYEE</a>
+            </td>
+            <td>
+                <a href="/Employee/DeleteEmployee?EmpId=@emp.EmpId">Delete</a>
+                <span>   </span>
+                <a href="/Employee/UpdateEmployee?empId=@emp.EmpId">Update</a>
+
             </td>
         </tr>
 

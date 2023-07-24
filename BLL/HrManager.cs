@@ -10,9 +10,19 @@ namespace BLL;
             list = DBManager.GetAllEmployee();
             return list;
         }
-        
+
     public bool InsertEmployee(Employee emp)
     {
        return DBManager.InsertEmployee(emp);
     }
+
+    public bool DeleteEmployee(int empId)
+    {
+        return DBManager.DeleteEmployee(empId);
+    }
+    public bool UpdateEmployee(Employee emp)
+    {
+        return DBManager.UpdateEmployee(emp);
+    }
+
     }
